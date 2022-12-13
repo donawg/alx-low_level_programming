@@ -5,11 +5,12 @@
  */
 void jack_bauer(void)
 {
-	int h = 0;
+	int h0, h1, m0, m1;
+	int h = 0, m = 0;
 
 	while (h < 24)
 	{
-		int m = 0;
+		m = 0;
 
 		while (m < 60)
 		{
