@@ -11,7 +11,7 @@ int main(void)
 
 	for (i = 48; i < 58; i++)
 	{
-		for (j = 48; j < 57; j++)
+		for (j = 48; j < 58; j++)
 		{
 			for (k = i; k < 58; k++)
 			{
@@ -28,11 +28,13 @@ int main(void)
 						putchar(44);
 						putchar(32);
 					}
+					else 
+					{
+						putchar('\n');
+						return (0);
+					}
 				}
 			}
 		}
 	}
-	putchar('\n');
-
-	return (0);
 }
