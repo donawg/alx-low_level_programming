@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 
+/**
+ * main - prints the sum of all the factors of 3 and 5
+ * randing to numbers up to but not including 1024
+ *
+ * Retusn: 0.
+ */
 int main(void)
 {
 	int sum;
@@ -15,4 +21,6 @@ int main(void)
 	}
 
 	printf("%d\n", sum);
+
+	return (0);
 }
