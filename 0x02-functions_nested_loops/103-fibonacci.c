@@ -12,19 +12,18 @@
 int main(void)
 {
 	unsigned long sum = 3;
-	unsigned long p = 1, n = 2, nn;
+	unsigned long p = 1, n = 2, nn = 3;
+
 	const unsigned long LIMIT = 4000000;
 
 	while (n <= LIMIT)
 	{
+		if (n % 2 == 0)
+			sum += n;
+
 		nn = p + n;
 		p = n;
 		n = nn;
-
-		if (n <= LIMIT)
-		{
-			sum += n;
-		}
 	}
 
 	printf("%lu\n", sum);
