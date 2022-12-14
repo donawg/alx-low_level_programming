@@ -23,28 +23,8 @@ void print_times_table(int n)
 				}
 				else
 				{
-					r = i * j;
-					if (r > 99)
-					{
-						_putchar(' ');
-						_putchar('0' + (r / 100));
-						_putchar('0' + ((r % 100) / 10));
-						_putchar('0' + (r % 10));
-					}
-					else if (r > 9)
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar('0' + (r / 10));
-						_putchar('0' + (r % 10));
-					}
-					else
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-						_putchar('0' + r);
-					}
+					r = i * j
+					print_unit(r)
 				}
 				if (j < n)
 					_putchar(',');
@@ -54,5 +34,34 @@ void print_times_table(int n)
 			}
 			i++;
 		}
+	}
+}
+/**
+ * print_unit - prints a single multiplication output in the table
+ * excluding the first unit of each line, which is awlays 0
+ * @r: the result from the multiplication
+ */
+void print_unit(int r)
+{
+	if (r > 99)
+	{
+		_putchar(' ');
+		_putchar('0' + (r / 100));
+		_putchar('0' + ((r % 100) / 10));
+		_putchar('0' + (r % 10));
+	}
+	else if (r > 9)
+	{
+		_putchar(' ');
+		_putchar(' ');
+		_putchar('0' + (r / 10));
+		_putchar('0' + (r % 10));
+	}
+	else
+	{
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(' ');
+		_putchar('0' + r);
 	}
 }
