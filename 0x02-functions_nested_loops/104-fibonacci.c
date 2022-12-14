@@ -21,7 +21,7 @@ int main(void)
 		p = n;
 		n = nn;
 
-		printf("%.0Lf", nn);
+		printf("%.0Lf", nn + 1);
 		if (c != 97)
 			printf(", ");
 		else

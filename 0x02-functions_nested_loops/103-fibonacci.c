@@ -11,7 +11,7 @@
  */
 int main(void)
 {
-	unsigned long sum = 3;
+	unsigned long sum = 0;
 	unsigned long p = 1, n = 2, nn = 3;
 
 	const unsigned long LIMIT = 4000000;
