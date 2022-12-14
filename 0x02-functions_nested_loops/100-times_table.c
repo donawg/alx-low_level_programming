@@ -1,0 +1,49 @@
+#include "main.h"
+
+/**
+ * print_times_table - prints the times table, for any from 0 to 15
+ * starting with 0
+ * @n: size of times table
+ */
+void print_times_table(int n)
+{
+	if (n >= 0 && n <= 15)
+	{
+		int r, i = 0;
+
+		while (i < (n + 1))
+		{
+			int j = 0;
+
+			while (j < (n + 1))
+			{
+				if (!j)
+				{
+					_putchar('0');
+				}
+				else
+				{
+					r = i * j;
+					if (r > n)
+					{
+						_putchar(' ');
+						_putchar('0' + (r / 10));
+						_putchar('0' + (r % 10));
+					}
+					else
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar('0' + r);
+					}
+				}
+				if (j < n)
+					_putchar(',');
+				else
+					_putchar('\n');
+				j++;
+			}
+			i++;
+		}
+	}
+}
