@@ -13,7 +13,7 @@ int main(void)
 {
 	unsigned long sum = 3;
 	unsigned long p = 1, n = 2, nn;
-	const long LIMIT = 4000000;
+	const unsigned long LIMIT = 4000000;
 
 	while (n <= LIMIT)
 	{
