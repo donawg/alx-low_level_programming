@@ -23,8 +23,8 @@ void print_times_table(int n)
 				}
 				else
 				{
-					r = i * j
-					print_unit(r)
+					r = i * j;
+					print_unit(r);
 				}
 				if (j < n)
 					_putchar(',');
