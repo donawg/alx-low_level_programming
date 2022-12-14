@@ -24,14 +24,22 @@ void print_times_table(int n)
 				else
 				{
 					r = i * j;
-					if (r > n)
+					if (r > 99)
 					{
+						_putchar(' ');
+						_putchar('0' + (r / 100));
+						_putchar('0' + ((r % 100) / 10));
+						_putchar('0' + (r % 10));
+					else if (r > 9)
+					{
+						_putchar(' ');
 						_putchar(' ');
 						_putchar('0' + (r / 10));
 						_putchar('0' + (r % 10));
 					}
 					else
 					{
+						_putchar(' ');
 						_putchar(' ');
 						_putchar(' ');
 						_putchar('0' + r);
