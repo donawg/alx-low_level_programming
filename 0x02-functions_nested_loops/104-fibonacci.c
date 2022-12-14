@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - prints the first 50 fibonacci numbers
+ * main - prints the first 100 fibonacci numbers
  * starting with 1 and 2
  *
  * Return: 0
@@ -15,14 +15,14 @@ int main(void)
 
 	printf("1, 2, ");
 
-	while (c < 50)
+	while (c < 100)
 	{
 		nn = p + n;
 		p = n;
 		n = nn;
 
 		printf("%lu", nn);
-		if (c != 49)
+		if (c != 99)
 			printf(", ");
 		else
 			putchar('\n');
