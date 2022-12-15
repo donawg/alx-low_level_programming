@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-	long double nn;
-	long double p = 1, n = 2;
+	unsigned long nn;
+	unsigned long p = 1, n = 2;
 	int c = 2;
 
 	printf("1, 2, ");
@@ -21,7 +21,7 @@ int main(void)
 		p = n;
 		n = nn;
 
-		printf("%.0Lf", nn + 1);
+		printf("%lu", nn + 1);
 		if (c != 97)
 			printf(", ");
 		else
