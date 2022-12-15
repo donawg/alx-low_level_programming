@@ -13,13 +13,11 @@ int main(void)
 	unsigned long p0 = 0, p1 = 1, n0 = 0, n1 = 2;
 	unsigned long C_LIMIT = 1000000000000000;
 	int c = 2;
-	unsigned long r;
 
 	printf("1, 2, ");
 
 	while (c < 98)
 	{
-		r = ((p0 + n0) * C_LIMIT) + (p1 + n1);
 		nn0 = p0 + n0;
 		nn1 = p1 + n1;
 		if (nn1 >= C_LIMIT)
