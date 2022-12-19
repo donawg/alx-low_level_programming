@@ -1,4 +1,4 @@
-#incldue "main.h"
+#include "main.h"
 
 /**
  * _puts - writes a string, then a new line

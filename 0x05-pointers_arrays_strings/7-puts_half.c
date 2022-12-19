@@ -1,6 +1,22 @@
 #include "main.h"
 
 /**
+ * _strlen - returns the length of a string
+ * @s: String to be measured
+ *
+ * Return: Length of string s
+ */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*(s + len) != '\0')
+		len++;
+
+	return (len);
+}
+
+/**
  * puts_half - prints hald of a string, then a new line
  * @str: string to print half of
  */
