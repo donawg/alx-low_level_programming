@@ -23,11 +23,11 @@ int _strlen(char *s)
 void puts_half(char *str)
 {
 	int str_len, half_len;
-	int i = 0;
+	int i;
 
 	str_len = _strlen(str);
-	half_len = str_len / 2;
-	while (i < half_len)
+	i = str_len / 2;
+	while (i < str_len)
 	{
 		_putchar(str[i]);
 		i++;

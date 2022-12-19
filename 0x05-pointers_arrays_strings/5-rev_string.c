@@ -26,7 +26,7 @@ void rev_string(char *s)
 	int l;
 
 	l = _strlen(s) + 1;
-	char temp_s[l];
+	char *temp_s[l];
 
 	for (i = 0; s[i] != '\0'; i++)
 		temp_s[i] = s[i];
