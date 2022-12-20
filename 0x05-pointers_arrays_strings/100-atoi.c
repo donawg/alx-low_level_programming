@@ -65,6 +65,7 @@ int _atoi(char *s)
 				else
 					s_int = 2147483647;
 				break;
+			}
 			p *= 10;
 			start--;
 		}
