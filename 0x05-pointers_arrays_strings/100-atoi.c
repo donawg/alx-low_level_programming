@@ -36,7 +36,7 @@ int _atoi(char *s)
 			start = i;
 		else
 			if (start >= 0)
-				break
+				break;
 
 	p = 1;
 	while (start >= 0)
