@@ -36,13 +36,13 @@ int _atoi(char *s)
 			s_int = 0 - s_int;
 			break;
 		}
-		else if (s[s_i] == '+')
+		else if (s[s_l] == '+')
 		{
 			break;
 		}
 		else
 		{
-			s_int += (s[s_i] - 48) * p;
+			s_int += (s[s_l] - 48) * p;
 			p *= 10;
 			s_l--;
 		}
