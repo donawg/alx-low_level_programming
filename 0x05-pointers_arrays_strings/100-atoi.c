@@ -31,7 +31,7 @@ int _atoi(char *s)
 	p = 1;
 	while (s_l >= 0)
 	{
-		if (s[s_l] == '-')		
+		if (s[s_l] == '-')
 		{
 			s_int = 0 - s_int;
 			break;
