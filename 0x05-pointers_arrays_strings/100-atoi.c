@@ -24,29 +24,21 @@ int _strlen(char *s)
  */
 int _atoi(char *s)
 {
-	int s_l, p, i, start, m_count;
-	int s_int = 0;
+	int s_l, p = 1, s_int = 0, i = 0, start = -1, m_count = 0;
 
 	s_l = _strlen(s) - 1;
-	i = 0;
-	start = -1;
-	m_count = 0;
 	while (i <= s_l)
 	{
 		if (s[i] >= 48 && s[i] < 58)
 		{
 			start = i;
 		}
-		else
-		{
-			if (start >= 0)
-				break;
-			if (s[i] == '-')
-				m_count += 1;
-		}
+		else if (start >= 0)
+			break;
+		else if (s[i] == '-')
+			m_count += 1;
 		i++;
 	}
-	p = 1;
 	while (start >= 0)
 	{
 		if (!(s[start] >= 48 && s[start] < 58))
@@ -57,8 +49,7 @@ int _atoi(char *s)
 		}
 		else
 		{
-			s_int += (s[start] - 48) * p;
-			if (p == 1000000000)
+			if (p == 1000000000 || s_int >= 1000000000)
 			{
 				if (m_count % 2)
 					s_int = -2147483648;
@@ -66,6 +57,7 @@ int _atoi(char *s)
 					s_int = 2147483647;
 				break;
 			}
+			s_int += (s[start] - 48) * p;
 			p *= 10;
 			start--;
 		}
