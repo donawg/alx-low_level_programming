@@ -25,12 +25,15 @@ void rev_string(char *s)
 	int i;
 	int l;
 
-	l = _strlen(s) + 1;
-	char *temp_s[l];
+	l = _strlen(s);
+	char temp_s[l];
 
 	for (i = 0; s[i] != '\0'; i++)
 		temp_s[i] = s[i];
 	temp_s[i - 1] = '\0';
 
-	s = temp_s;
+	i = 0;
+	l--;
+	while (l >= 0)
+		s[i++] = temp_s[j--];
 }
