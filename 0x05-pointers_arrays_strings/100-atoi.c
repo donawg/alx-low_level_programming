@@ -24,27 +24,37 @@ int _strlen(char *s)
  */
 int _atoi(char *s)
 {
-	int s_l, p;
+	int s_l, p, i, start;
 	int s_int = 0;
 
 	s_l = _strlen(s) - 1;
-	p = 1;
-	while (s_l >= 0)
+	i = 0;
+	start = -1;
+	while (i <= s_l)
 	{
-		if (s[s_l] == '-')
+		if (s[i] >= 48 && s[i] < 58)
+			start = i;
+		else
+			if (start >= 0)
+				break
+
+	p = 1;
+	while (start >= 0)
+	{
+		if (s[start] == '-')
 		{
 			s_int = 0 - s_int;
 			break;
 		}
-		else if (s[s_l] == '+')
+		else if (s[start] < 48 && s[start] >= 58)
 		{
 			break;
 		}
 		else
 		{
-			s_int += (s[s_l] - 48) * p;
+			s_int += (s[start] - 48) * p;
 			p *= 10;
-			s_l--;
+			start--;
 		}
 	}
 	return (s_int);
