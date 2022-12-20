@@ -58,6 +58,13 @@ int _atoi(char *s)
 		else
 		{
 			s_int += (s[start] - 48) * p;
+			if (p == 1000000000)
+			{
+				if (m_count % 2)
+					s_int = -2147483648;
+				else
+					s_int = 2147483647;
+				break;
 			p *= 10;
 			start--;
 		}
