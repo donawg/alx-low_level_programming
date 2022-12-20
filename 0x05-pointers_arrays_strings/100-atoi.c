@@ -42,7 +42,7 @@ int _atoi(char *s)
 			if (start >= 0)
 				break;
 			if (s[i] == '-')
-				m_count += 1
+				m_count += 1;
 		}
 		i++;
 	}
