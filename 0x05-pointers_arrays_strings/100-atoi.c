@@ -46,7 +46,7 @@ int _atoi(char *s)
 			s_int = 0 - s_int;
 			break;
 		}
-		else if (s[start] < 48 && s[start] >= 58)
+		else if (!(s[start] => 48 && s[start] < 58))
 		{
 			break;
 		}
