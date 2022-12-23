@@ -26,22 +26,16 @@ int _strlen(char *s)
 char *_strcat(char *dest, char *src)
 {
 	int dest_len, src_len;
+	int i;
 
 	dest_len = _strlen(dest);
 	src_len = _strlen(src);
-
-	char *new_str[dest_len + src_len];
-	int i = 0;
+	i = dest_len;
 
 	while (i < (dest_len + src_len))
 	{
-		if (i >= dest_len)
-			new_str[i] = src[i - dest_len];
-		else
-			new_str[i] = dest[i];
+		*(dest + i) = *(src + (i - dest_len));
 		i++;
 	}
-	*dest = *new_str;
-
-	return (new_str);
+	return (dest);
 }
