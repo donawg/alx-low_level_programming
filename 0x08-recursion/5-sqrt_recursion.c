@@ -8,14 +8,18 @@
  */
 int _sqrt_recursion(int n)
 {
-	int i = 0;
-
-	while (1)
+	if (n < 10000)
 	{
-		if (i * i > n)
-			return (-1);
-		if (i * i == n)
-			return (i);
-		i++;
+		n *= 10000;
 	}
+	int initial, guess;
+
+	initial = n / 10000;
+	guess = n % 10000;
+
+	if (guess * guess > initial)
+		return (-1);
+	if (guess * guess == initial)
+		return (guess);
+	return (_sqrt_recursion(n + 1));
 }
