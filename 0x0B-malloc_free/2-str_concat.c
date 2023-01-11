@@ -33,6 +33,7 @@ char *str_concat(char *s1, char *s2)
 		len_j++;
 	}
 	c_len = len_i + len_j ? len_i + len_j - 1 ? len_i + len_j - 1 : 1 : 1;
+	printf("%d\n", c_len);
 	concat = malloc(sizeof(char) * c_len);
 	if (!concat)
 		return (NULL);
