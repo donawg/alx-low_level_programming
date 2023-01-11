@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 			break;
 		len_j++;
 	}
-	c_len = (len_i ? len_i - 1 : 0) + (len_j ? len_j  - 1 : 0) + 1;
+	c_len = len_i + len_j + 1;
 	concat = malloc(sizeof(char) * c_len);
 	if (!concat)
 		return (NULL);
@@ -48,6 +48,6 @@ char *str_concat(char *s1, char *s2)
 		*(concat + (j + i)) = *(s2 + j);
 		j++;
 	}
-	*(concat + (c_len - 1)) = '\0';
+	*(concat + (i + j)) = '\0';
 	return (concat);
 }
