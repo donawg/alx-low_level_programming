@@ -8,7 +8,7 @@
  *
  * Return: Pointer to new string. NULL if fail.
  */
-char *_strdup(chat *str)
+char *_strdup(char *str)
 {
 	int len;
 	int i;
@@ -22,8 +22,7 @@ char *_strdup(chat *str)
 	{
 		if (str[len] == '\0')
 			break;
-		else
-			len++;
+		len++;
 	}
 	strdup = malloc(sizeof(char) * (len + 1));
 	if (!strdup)
