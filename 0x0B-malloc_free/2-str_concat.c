@@ -11,25 +11,9 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int len_i, len_j, i, j;
+	int len_i, len_j, i, j, c_len;
 	char *concat;
 
-	/**
-	if (s1 == NULL)
-	{
-		s1 = malloc(sizeof(char));
-		if (!s1)
-			return (NULL);
-		*s1 = '\0';
-	}
-	if (s2 == NULL)
-	{
-		s2 = malloc(sizeof(char));
-		if (!s2)
-			return (NULL);
-		*s2 = '\0';
-	}
-	*/
 	if (!s1)
 		s1 = "";
 	if (!s2)
@@ -48,7 +32,8 @@ char *str_concat(char *s1, char *s2)
 			break;
 		len_j++;
 	}
-	concat = malloc(sizeof(char) * (len_i + len_j - 1));
+	c_len = len_i + len_j ? 1 : len_i + len_j - 1 ? 1 : len_i + len_j - 1;
+	concat = malloc(sizeof(char) * c_len);
 	if (!concat)
 		return (NULL);
 	i = 0;
@@ -58,11 +43,11 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 	j = 0;
-	while (j <= len_j)
+	while (j < len_j)
 	{
 		*(concat + (j + i)) = *(s2 + j);
 		j++;
 	}
-
+	*(concat + (c_len - 1)) = '\0';
 	return (concat);
 }
