@@ -64,9 +64,18 @@ void print_f(char *s)
  */
 void print_num(num)
 {
-	int digit;
+	int d;
 
-	i = 
+	d = 1;
+	while ((num / 10) > d)
+		d *= 10;
+	while (d >= 1)
+	{
+		_putchar(48 + (num / d));
+		num /= 10;
+		d /= 10;
+	}
+}
 
 /**
  * main - multiplies two numbers passed into program and prints result
