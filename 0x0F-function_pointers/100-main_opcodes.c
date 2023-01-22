@@ -36,6 +36,11 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
+/**
+ * next - pointer for next function
+ *
+ * Return: 0.
+ */
 int next(void)
 {
 	return (0);
