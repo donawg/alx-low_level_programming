@@ -1,18 +1,33 @@
-extern printf
+ SECTION .data
 
-section .text
+msg:    db "Hello, Holberton", 0
 
-global main
+fmt:    db "%s", 10, 0
+
+
+
+        SECTION .text
+
+        extern printf
+
+        global main, _start
 
 main:
-	push rbp
-	move rbp, rsp
 
-	mov rdi, msg
-	call printf
+_start:
 
-	leave
-	ret
+        mov esi, msg    
 
-section .data
-	msg db 'Hello, Holberton', 16, 10, 0
+        mov edi, fmt    
+
+        mov eax, 0      
+
+        call printf
+
+
+
+        mov ebx, 0      
+
+        mov eax, 1  
+
+        int 0x80      
