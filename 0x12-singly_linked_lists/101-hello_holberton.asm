@@ -1,19 +1,17 @@
-SECTION .data
-
-	msg: db "Hello, Holberton", 0
-	fmt: db "%s", 10, 0
-
-SECTION .text
-
-	extern printf
-	global main
+section .text
+global main
 
 main:
-	mov esi, msg
-	mov edi, fmt
-	mov eax, 0
-	call printf
+	mov rdi, 0x1
+	mov rsi, greet
+	mov rdx, greetLen
+	mov rax, 0x1
+	syscall
 
-	mov ebx, 0
-	mov eax, 1
-	int 0x80
+	xor rdi, rdi
+	mov rax, 0x3c
+	syscall
+
+section .data
+	greet db "Hello, Holberton", 0xa
+	greetLen equ $-greet
