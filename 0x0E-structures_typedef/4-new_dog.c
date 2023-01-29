@@ -16,19 +16,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!dog)
 		return (NULL);
 	name_dup = malloc(sizeof(char *));
-	if (!name_dup || !name)
+	if (!name_dup)
 	{
 		free(dog);
 		return (NULL);
 	}
 	owner_dup = malloc(sizeof(char *));
-	if (!owner_dup || owner)
+	if (!owner_dup)
 	{
 		free(name_dup);
 		free(dog);
 		return (NULL);
 	}
 
+	if (!name)
+		name = "";
+	if (!owner)
+		owner = "";
 	for (i = 0; name[i] != '\0'; i++)
 		name_dup[i] = name[i];
 	name_dup[i] = '\0';
