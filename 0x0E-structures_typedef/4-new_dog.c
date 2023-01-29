@@ -30,9 +30,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	if (!name)
-		name = "";
+		name = "(nil)";
 	if (!owner)
-		owner = "";
+		owner = "(nil)";
 	for (i = 0; name[i] != '\0'; i++)
 		name_dup[i] = name[i];
 	name_dup[i] = '\0';
