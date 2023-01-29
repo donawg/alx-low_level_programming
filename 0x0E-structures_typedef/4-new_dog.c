@@ -16,13 +16,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!dog)
 		return (NULL);
 	name_dup = malloc(sizeof(char *));
-	if (!name_dup)
+	if (!name_dup || !name)
 	{
 		free(dog);
 		return (NULL);
 	}
 	owner_dup = malloc(sizeof(char *));
-	if (!owner_dup)
+	if (!owner_dup || owner)
 	{
 		free(name_dup);
 		free(dog);
